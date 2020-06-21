@@ -8,7 +8,7 @@
 
 package com.atguigu.core.bean;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
+
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
@@ -60,16 +60,7 @@ public class PageVo implements Serializable {
 		this.totalPage = (int)Math.ceil((double)totalCount/pageSize);
 	}
 
-	/**
-	 * 分页
-	 */
-	public PageVo(IPage<?> page) {
-		this.list = page.getRecords();
-		this.totalCount = (int)page.getTotal();
-		this.pageSize = (int)page.getSize();
-		this.currPage = (int)page.getCurrent();
-		this.totalPage = (int)page.getPages();
-	}
+
 
 
 	
